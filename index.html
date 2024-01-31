@@ -51,8 +51,9 @@
                     <h3 class="list-title">&#9207;My Tasks</h3>
 
                     <ul>
-                        <li v-for="(task, index) in tasks">
-                            <div :class="task.done === true ? 'text-decoration-line-through' : '' ">{{ task.text }} <span><i class="bi bi-x-square-fill ms-5" @click="deleteTask(index)"></i></span></div>
+                        <li v-for="(task, index) in tasks" class="d-flex">
+                            <div :class="task.done === true ? 'text-decoration-line-through' : '' " @click="setDoneToDo(task)" class="task-text">{{ task.text }}</div>
+                            <i class="bi bi-x-square-fill ms-4" @click="deleteTask(index)"></i>
                         </li>
                     </ul>
                 </div>

@@ -66,3 +66,7 @@ span {
     font-size: larger;
     font-weight: 900;
 }
+
+.task-text {
+    min-width: 50%;
+}
