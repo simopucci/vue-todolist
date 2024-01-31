@@ -37,7 +37,7 @@ body {
 }
 
 .top-section {
-    margin-left: 40px;
+    padding: 15px;
     line-height: 50px;
     border-bottom: 1px solid rgb(246 248 249)
 }
@@ -65,26 +65,4 @@ span {
 .list-title {
     font-size: larger;
     font-weight: 900;
-}
-
-.green-thick {
-    color: rgb(15, 222, 4);
-    width: 20px;
-    height: 20px;
-    border: 1px solid rgb(15, 222, 4);
-    border-radius: 50%;
-    text-align: center;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.red-cross {
-    color: red;
-    width: 20px;
-    height: 20px;
-    border: 1px solid red;
-    border-radius: 50%;
-    text-align: center;
-    margin-right: 5px;
-    cursor: pointer;
 }

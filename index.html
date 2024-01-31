@@ -28,63 +28,37 @@
     <script type="text/JavaScript" src="./js/main.js" defer></script>
 </head>
 <body>
+    <div id="app">
+        <!-- Intestazione -->
+        <header class="main-header">
+            <h1 class="main-title">{{ title }}</h1>
+        </header>
     
-    <!-- Intestazione -->
-    <header class="main-header">
-        <h1 class="main-title">Toboolist</h1>
-    </header>
+        <main>
+            <div class="container">
+                
+                <!-- Top section-->
+                <div class="top-section">
+                    <h2>Add nSew task</h2>
+                    <input v-model.trim="newTasks.text" type="text" class="form-control my-2" placeholder="New Task">
+                    <button class="btn btn-success me-2" @click="saveNewTask()"><i class="bi bi-download pe-2"></i>Save</button>
+                </div>
+                
+                <!-- Main section-->
+                <div class="main-section">
+                    
+                    <!-- My Task list-->
+                    <h3 class="list-title">&#9207;My Tasks</h3>
 
-    <main>
-        <div class="container">
-            
-            <!-- Top section-->
-            <section class="top-section">
-                <button class="btn btn-primary">Add Task</button>
-                <button class="btn btn-outline-secondary">Add Section</button>
-            </section>
-            
-            <!-- Main section-->
-            <section class="main-section">
-                
-                <!-- New Task list-->
-                <ul>
-                    <li class="list-title">&#9207; New Task</li>
-                    <li>
-                        <span class="green-thick">&#10003;</span><span>Quarterly Newsletter</span>
-                    </li>
-                </ul>
-                
-                <!-- Old list-->
-                <ul>
-                    <li class="list-title">&#9207; Old Task</li>
-                    <li>
-                        <span class="green-thick">&#10003;</span><span>Recruiting Blog post</span>
-                    </li>
-                    <li>
-                        <span class="green-thick">&#10003;</span><span>Mobile App Launch</span>
-                    </li>
-                    <li>
-                        <span class="red-cross">&#10007;</span><span>Interview John H.</span>
-                    </li>
-                    <li>
-                        <span class="green-thick">&#10003;</span><span>Summer update to mobile storefront</span>
-                    </li>
-                    <li>
-                        <span class="red-cross">&#10007;</span><span>Schedule meeting with Alex</span> 
-                    </li>
-                    <li>
-                        <span class="green-thick">&#10003;</span><span>Homepage refresh</span>
-                    </li>
-                    <li>
-                        <span class="green-thick">&#10003;</span><span>Onboard new Sales team members</span>
-                    </li>
-                    <li>
-                        <span class="green-thick">&#10003;</span><span>Review editorial calendar</span>
-                    </li>
-                </ul>
-            </section>
-        </div>
-    </main>
+                    <ul>
+                        <li v-for="(task, index) in tasks">
+                            <div :class="task.done === true ? 'text-decoration-line-through' : '' ">{{ task.text }} <span><i class="bi bi-x-square-fill ms-5" @click="deleteTask(index)"></i></span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
     
     
     <!-- Link Bootstrap JavaScript -->
