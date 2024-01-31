@@ -1,0 +1,90 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(246 248 249);
+}
+
+/* HEADER   */
+.main-header {
+    line-height: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.main-logo {
+    padding: 10px 0 10px 20px;
+    vertical-align: middle;
+}
+
+.main-title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* TOP SECTION */
+.container {
+    background-color: white;
+    width: 70%;
+    margin: 40px auto;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.top-section {
+    margin-left: 40px;
+    line-height: 50px;
+    border-bottom: 1px solid rgb(246 248 249)
+}
+
+/* MAIN SECTION */
+.main-section {
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+ul {
+    margin: 30px 0;
+}
+
+li {
+    list-style: none;
+    line-height: 20px;
+    margin: 15px 0;
+}
+
+span {
+    display: inline-block;
+}
+
+.list-title {
+    font-size: larger;
+    font-weight: 900;
+}
+
+.green-thick {
+    color: rgb(15, 222, 4);
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(15, 222, 4);
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.red-cross {
+    color: red;
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 5px;
+    cursor: pointer;
+}
